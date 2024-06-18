@@ -36,7 +36,6 @@ contract NFTMarket {
         token.transferFrom(msg.sender, listing.seller, listing.price);
         nft.transferFrom(address(this), msg.sender, listing.tokenId);
 
-        // Remove the listing
         listings[index] = listings[listings.length - 1];
         listings.pop();
     }
